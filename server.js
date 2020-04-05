@@ -1,8 +1,7 @@
-var express = require('express'), 
-    http = require('http'), 
+var express = require('express'),
+    http = require('http'),
     path = require('path')
-    io = require('socket.io'),
-    twilio = require('twilio');
+    io = require('socket.io');
 
 // Express configuration boilerplate
 var app = express();
@@ -14,13 +13,6 @@ app.configure('development', function() {
     app.use(express.errorHandler());
 });
 
-// Create a route to return a capability token with a client name
-app.get('/token', function(request, response) {
-    var capability = new twilio.Capability();
-    capability.allowClientIncoming(request.query.clientName);
-    capability.allowClientOutgoing('AP3f9a303453eef05f25e7720e5429e2e6');
-    response.send(capability.generate());
-});
 
 // Set up express server
 var server = http.createServer(app).listen(app.get('port'), function(){
@@ -38,7 +30,7 @@ io.configure(function () {
 // Handle socket traffic
 io.sockets.on('connection', function (socket) {
     // Relay chat data to all clients
-	socket.on('editorUpdate', function(data) {
-		socket.broadcast.emit('editorUpdate', data);
-	});
+    socket.on('myInputUpdate', function(data) {
+        socket.broadcast.emit('myInputUpdate', data);
+    });
 });

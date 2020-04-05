@@ -1,3 +1,3 @@
-# Group Editor
+# Textarea collaborative editor sample
 
-A group text editor using socket.io, twilio, and the Ace editor.
+Minimum real time collaborative textarea editor using websockets (socket.io) and expressjs.

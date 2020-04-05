@@ -1,18 +1,17 @@
 {
-  "name": "groupeditor",
-  "version": "0.0.0",
-  "description": "A group text editor with socket.io, Ace, and Twilio",
+  "name": "textarea-collaborative-editor-sample",
+  "version": "1.0.0",
+  "description": "Minimum text area real time collaborative editor sample",
   "main": "server.js",
   "dependencies": {
     "express": "~3.2.0",
-    "socket.io": "~0.9.14",
-    "twilio":"1.x"
+    "socket.io": "~0.9.14"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
-  "author": "Kevin Whinnery",
+  "repository": "github:jorgeacortes/textarea-collaborative-editor-sample",
+  "author": "Jorge Cortés",
   "license": "MIT"
 }
