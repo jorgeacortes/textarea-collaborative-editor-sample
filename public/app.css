@@ -1,5 +1,5 @@
 html, body {
-    height:100%;
+	background-color:#ccc;
 }
 
 *, html, body {
@@ -8,10 +8,11 @@ html, body {
 
 h4 {
     margin:0 0 10px 0;
-    font-size:18px;
+    font-size:3em;
 }
 
 #testing-area {
+	font-size:1em;
     width: 400px;
-    height: 800px;
+    height: 400px;
 }
